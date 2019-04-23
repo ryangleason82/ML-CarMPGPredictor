@@ -4,7 +4,7 @@ Use gradient descent algorithm to determine a relationship between the miles per
 
 Miles per Gallon = m \* (Car Horsepower) + b
 
-class LinearRegression with methods:
+### class LinearRegression with methods:
 
 - gradientDescent() - Run one iteration of GD and update 'm' and 'b'
 - train() - Run GD until we get good values for 'm' and 'b'
