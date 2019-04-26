@@ -17,4 +17,4 @@ Miles per Gallon = m \* (Car Horsepower) + b
 - Calculate the slope of MSE with respect to 'm' and 'b'
 - Are both slopes very small? If so, we are done.
 - Multiply both slopes by learning rate
-- Subtract results from 'b' and 'm'
+- Subtract results from "b" and "m"
