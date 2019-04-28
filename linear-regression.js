@@ -64,7 +64,7 @@ class LinearRegression {
 		features = tf.ones([features.shape[0], 1]).concat(features, 1);
 		return features;
 	}
-
+	// Nethod to standardize features
 	standardize(features) {
 		const { mean, variance } = tf.moments(features, 0);
 
