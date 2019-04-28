@@ -13,8 +13,10 @@ Miles per Gallon = m \* (Car Horsepower) + b
 
 ### How Gradient Descent Works
 
-- Pick a value for 'b' and 'm'
-- Calculate the slope of MSE with respect to 'm' and 'b'
+- Pick a value for 'b' and 'm' (and m2, m3, m4, etc.)
+- Calculate the slope of MSE with respect to 'm' and 'b' using all observations
+  - In batch gradient descent, you only use a portion of the observations
+  - In a Stochastic Gradient Descent use one observation to calculate the slope. Just one row at a time. This way you come to a convergence much quicker.
 - Are both slopes very small? If so, we are done.
 - Multiply both slopes by learning rate
 - Subtract results from "b" and "m"
