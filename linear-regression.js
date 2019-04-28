@@ -15,14 +15,14 @@ class LinearRegression {
 		this.weights = tf.zeros([this.features.shape[1], 1]);
 	}
 
-	gradientDescent() {
-		const currentGuesses = this.features.matMul(this.weights);
-		const differences = currentGuesses.sub(this.labels);
+	gradientDescent(features, labels) {
+		const currentGuesses = features.matMul(this.weights);
+		const differences = currentGuesses.sub(labels);
 
-		const slopes = this.features
+		const slopes = features
 			.transpose()
 			.matMul(differences)
-			.div(this.features.shape[0]);
+			.div(features.shape[0]);
 
 		this.weights = this.weights.sub(slopes.mul(this.options.learningRate));
 	}
@@ -67,7 +67,7 @@ class LinearRegression {
 		features = tf.ones([features.shape[0], 1]).concat(features, 1);
 		return features;
 	}
-	// Nethod to standardize features
+	// Method to standardize features
 	standardize(features) {
 		const { mean, variance } = tf.moments(features, 0);
 
