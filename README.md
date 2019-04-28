@@ -18,3 +18,10 @@ Miles per Gallon = m \* (Car Horsepower) + b
 - Are both slopes very small? If so, we are done.
 - Multiply both slopes by learning rate
 - Subtract results from "b" and "m"
+
+### Custom Learning Rate Optimizer
+
+- With every iteration of GD, calculate the exact value of MSE and store it
+- After running an iteration of GD, look at the current MSE and the old MSE
+- If the MSE went _up_ then we did a bad update, so divide learning rate by 2
+- If the MSE went _down_ then we are going in the right direction! Increase LR by 5%
