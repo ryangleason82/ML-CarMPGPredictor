@@ -1,6 +1,7 @@
 const tf = require("@tensorflow/tfjs");
 const _ = require("lodash");
 
+// Main Class
 class LinearRegression {
 	constructor(features, labels, options) {
 		this.features = this.processFeatures(features);
